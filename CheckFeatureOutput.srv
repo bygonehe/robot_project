@@ -1,0 +1,5 @@
+int64 feature_index
+float32[] feature_value
+float32[] testobject
+---
+float32[] output_object
