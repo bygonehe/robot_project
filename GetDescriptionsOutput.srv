@@ -1,6 +1,0 @@
-float32[] object_list
-float32[] feature_list
-int64[] feature_index
-float32[] target_object
----
-int32[] output_feature
