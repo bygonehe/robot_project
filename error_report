@@ -1,0 +1,114 @@
+genmsg.base.InvalidMsgSpec: Duplicate field names in message: ['msg', 'msg']
+CMake Error at /opt/ros/lunar/share/catkin/cmake/safe_execute_process.cmake:11 (message):
+  execute_process(/home/apple/catkin_ws/build/catkin_generated/env_cached.sh
+  "/usr/bin/python" "/usr/bin/empy" "--raw-errors" "-F"
+  "/home/apple/catkin_ws/build/beginner_tutorials/cmake/beginner_tutorials-genmsg-context.py"
+  "-o"
+  "/home/apple/catkin_ws/build/beginner_tutorials/cmake/beginner_tutorials-genmsg.cmake"
+  "/opt/ros/lunar/share/genmsg/cmake/pkg-genmsg.cmake.em") returned error
+  code 1
+Call Stack (most recent call first):
+  /opt/ros/lunar/share/catkin/cmake/em_expand.cmake:25 (safe_execute_process)
+  /opt/ros/lunar/share/genmsg/cmake/genmsg-extras.cmake:303 (em_expand)
+  beginner_tutorials/CMakeLists.txt:77 (generate_messages)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/apple/catkin_ws/build/CMakeFiles/CMakeOutput.log".
+See also "/home/apple/catkin_ws/build/CMakeFiles/CMakeError.log".
+Makefile:1466: recipe for target 'cmake_check_build_system' failed
+make: *** [cmake_check_build_system] Error 1
+Invoking "make cmake_check_build_system" failed
+apple@ubuntu:~/catkin_ws$ catkin_make
+Base path: /home/apple/catkin_ws
+Source space: /home/apple/catkin_ws/src
+Build space: /home/apple/catkin_ws/build
+Devel space: /home/apple/catkin_ws/devel
+Install space: /home/apple/catkin_ws/install
+####
+#### Running command: "make cmake_check_build_system" in "/home/apple/catkin_ws/build"
+####
+-- Using CATKIN_DEVEL_PREFIX: /home/apple/catkin_ws/devel
+-- Using CMAKE_PREFIX_PATH: /home/apple/catkin_ws/devel;/opt/ros/lunar
+-- This workspace overlays: /home/apple/catkin_ws/devel;/opt/ros/lunar
+-- Using PYTHON_EXECUTABLE: /usr/bin/python
+-- Using Debian Python package layout
+-- Using empy: /usr/bin/empy
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Call enable_testing()
+-- Using CATKIN_TEST_RESULTS_DIR: /home/apple/catkin_ws/build/test_results
+-- Found gtest sources under '/usr/src/gtest': gtests will be built
+-- Using Python nosetests: /usr/bin/nosetests-2.7
+-- catkin 0.7.8
+-- BUILD_SHARED_LIBS is on
+-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-- ~~  traversing 6 packages in topological order:
+-- ~~  - gaze_following (metapackage)
+-- ~~  - beginner_tutorials
+-- ~~  - dataset_collection
+-- ~~  - model_testing
+-- ~~  - saliency_mask_extraction
+-- ~~  - learning_tf
+-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+-- +++ processing catkin metapackage: 'gaze_following'
+-- ==> add_subdirectory(gaze_following/gaze_following)
+-- +++ processing catkin package: 'beginner_tutorials'
+-- ==> add_subdirectory(beginner_tutorials)
+-- Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
+/opt/ros/lunar/share/genmsg/cmake/pkg-genmsg.cmake.em:56: error: <class 'genmsg.base.InvalidMsgSpec'>: Duplicate field names in message: ['msg', 'msg']
+Traceback (most recent call last):
+  File "/usr/bin/empy", line 3302, in <module>
+    if __name__ == '__main__': main()
+  File "/usr/bin/empy", line 3300, in main
+    invoke(sys.argv[1:])
+  File "/usr/bin/empy", line 3283, in invoke
+    interpreter.wrap(interpreter.file, (file, name))
+  File "/usr/bin/empy", line 2295, in wrap
+    self.fail(e)
+  File "/usr/bin/empy", line 2284, in wrap
+    callable(*args)
+  File "/usr/bin/empy", line 2359, in file
+    self.safe(scanner, done, locals)
+  File "/usr/bin/empy", line 2401, in safe
+    self.parse(scanner, locals)
+  File "/usr/bin/empy", line 2421, in parse
+    token.run(self, locals)
+  File "/usr/bin/empy", line 1425, in run
+    interpreter.execute(self.code, locals)
+  File "/usr/bin/empy", line 2595, in execute
+    _exec(statements, self.globals, locals)
+  File "/usr/bin/empy", line 42, in _exec
+    exec("""exec code in globals""")
+  File "<string>", line 1, in <module>
+  File "<string>", line 48, in <module>
+  File "/opt/ros/lunar/lib/python2.7/dist-packages/genmsg/deps.py", line 70, in find_srv_dependencies_with_type
+    spec = genmsg.msg_loader.load_srv_from_file(msg_context, msg_file, full_type_name)
+  File "/opt/ros/lunar/lib/python2.7/dist-packages/genmsg/msg_loader.py", line 486, in load_srv_from_file
+    spec = load_srv_from_string(msg_context, text, full_name)
+  File "/opt/ros/lunar/lib/python2.7/dist-packages/genmsg/msg_loader.py", line 470, in load_srv_from_string
+    msg_in = load_msg_from_string(msg_context, text_in.getvalue(), '%sRequest'%(full_name))
+  File "/opt/ros/lunar/lib/python2.7/dist-packages/genmsg/msg_loader.py", line 269, in load_msg_from_string
+    spec = MsgSpec(types, names, constants, text, full_name, package_name)
+  File "/opt/ros/lunar/lib/python2.7/dist-packages/genmsg/msgs.py", line 251, in __init__
+    raise InvalidMsgSpec("Duplicate field names in message: %s"%names)
+genmsg.base.InvalidMsgSpec: Duplicate field names in message: ['msg', 'msg']
+CMake Error at /opt/ros/lunar/share/catkin/cmake/safe_execute_process.cmake:11 (message):
+  execute_process(/home/apple/catkin_ws/build/catkin_generated/env_cached.sh
+  "/usr/bin/python" "/usr/bin/empy" "--raw-errors" "-F"
+  "/home/apple/catkin_ws/build/beginner_tutorials/cmake/beginner_tutorials-genmsg-context.py"
+  "-o"
+  "/home/apple/catkin_ws/build/beginner_tutorials/cmake/beginner_tutorials-genmsg.cmake"
+  "/opt/ros/lunar/share/genmsg/cmake/pkg-genmsg.cmake.em") returned error
+  code 1
+Call Stack (most recent call first):
+  /opt/ros/lunar/share/catkin/cmake/em_expand.cmake:25 (safe_execute_process)
+  /opt/ros/lunar/share/genmsg/cmake/genmsg-extras.cmake:303 (em_expand)
+  beginner_tutorials/CMakeLists.txt:77 (generate_messages)
+
+
+-- Configuring incomplete, errors occurred!
+See also "/home/apple/catkin_ws/build/CMakeFiles/CMakeOutput.log".
+See also "/home/apple/catkin_ws/build/CMakeFiles/CMakeError.log".
+Makefile:1466: recipe for target 'cmake_check_build_system' failed
+make: *** [cmake_check_build_system] Error 1
+Invoking "make cmake_check_build_system" failed
