@@ -64,6 +64,7 @@ find_package(catkin REQUIRED COMPONENTS
    FILES
    AddTwoInts.srv
    CheckFeatureOutput.srv
+   GetDescriptionsOutput.srv
  )
 
 ## Generate actions in the 'action' folder
@@ -77,6 +78,7 @@ find_package(catkin REQUIRED COMPONENTS
  generate_messages(
    DEPENDENCIES
    std_msgs
+   
  )
 
 ################################################
