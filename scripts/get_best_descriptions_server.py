@@ -44,7 +44,7 @@ def get_probability(feature_index, object_list, target_object):
 # are distinctive. Then you should return two possible descriptions. On the other hand, one single feature might not 
 # be sufficient to describe the object. Then you should return (all possible) pairs of features which can distinctively 
 # describe the target object and so forth.
-def get_best_descriptions(object_list, feature_list, target_object): #feature_list = [0,1,2,3]
+def handle_get_best_descriptions(object_list, feature_list, target_object): #feature_list = [0,1,2,3]
     #feature_list = [0,1,2,3] represents color, size, shape, position individually
     NO_OBJECT = ('NO CORRESPONDING OBJECT')
     number_of_feature = len(feature_list)
