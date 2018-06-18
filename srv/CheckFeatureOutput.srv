@@ -1,9 +1,9 @@
 #input should be the feature_index,feature_value and object_list
 #request field
-beginner_tutorials/Feature msg
-beginner_tutorials/Object msg
+beginner_tutorials/Feature feature
+beginner_tutorials/Object object
 ---
 #Output should be the object_index
 #response field
-beginner_tutorials/OutputObject msg
+beginner_tutorials/OutputObject outputobject
 

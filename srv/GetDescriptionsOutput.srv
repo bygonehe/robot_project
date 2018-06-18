@@ -1,7 +1,7 @@
 #request field
-beginner_tutorial/Feature msg
-beginner_tutorial/Object msg
+beginner_tutorials/Feature feature
+beginner_tutorials/Object object
 
 ---
 #response field
-beginner_tutorial/OutputFeature msg
+beginner_tutorials/OutputFeature outputfeature
