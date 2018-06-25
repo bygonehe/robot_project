@@ -57,13 +57,13 @@ def robot_know_which_object_human_want(feature_index, feature_value, object_list
     return [thresholded_list,corr_index]
 
 
-def robot_know_which_object_human_want_server():
-    rospy.init_node('robot_know_which_object_human_want_server')
+def check_feature_server():
+    rospy.init_node('check_feature_server')
     s = rospy.Service('check_feature', CheckFeatureOutput, robot_know_which_object_human_want)
     print "Ready to check feature"
     rospy.spin()
 
 if __name__ == "__main__":
-    robot_know_which_object_human_want_server()
+    check_feature_server()
 
 
