@@ -1,4 +1,4 @@
-float32[] feature_value
+float32[] feature_val
 int64 COLOR=0
 int64 SIZE=1
 int64 SHAPE=2
