@@ -1,1 +1,22 @@
 
+
+if __name__=="__main__":
+    color = np.array([random.random(), random.random(), random.random()])
+    size = random.random() 
+    shape = random.random()
+    position = np.array([random.random(), random.random(), random.random()])
+    testobject1 = np.array([color,size,shape,position])
+    
+    color = np.array([random.random(), random.random(), random.random()])
+    size = random.random() 
+    shape = random.random()
+    position = np.array([random.random(), random.random(), random.random()])
+    testobject2 = np.array([color,size,shape,position])
+    
+    color = np.array([random.random(), random.random(), random.random()])
+    size = random.random() 
+    shape = random.random()
+    position = np.array([random.random(), random.random(), random.random()])
+    testobject3 = np.array([color,size,shape,position])
+    
+object_list = np.array([testobject1 ,testobject2, testobject3])
