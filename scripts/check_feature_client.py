@@ -30,8 +30,10 @@ if __name__ == "__main__":
 
 
     y = Feature()
-    #y.feature_val = [0.2, 0.3, 0.5]
-    y.feature_val = 0.21
+    y.feature_val = np.array([0.2, 0.3, 0.5])
+    #y.feature_val = 0.21
+
+
     z1 = Object()
     z1.name = 'Banana'
     #z1_color = Feature()
@@ -57,35 +59,13 @@ if __name__ == "__main__":
     z2.position.feature_val = np.array([0.6, 0.5, 0.1])
     z2.feature_list = [z2.color.feature_val, z2.shape.feature_val, z2.size.feature_val, z2.position.feature_val]
 
-    #z2 = Object()
-    z = [z1.feature_list,z2.feature_list]  
-    print(z[0][3])
+    z = np.array([z1.feature_list,z2.feature_list])
     print(z)
-    feature_output=check_feature_client(1, y, z)
-    
-
-    #color = np.array([random.random(), random.random(), random.random()])
-    #size = random.random() 
-    #shape = random.random()
-    #position = np.array([random.random(), random.random(), random.random()])
-    #testobject1 = np.array([color,size,shape,position])
-    
-    #color = np.array([random.random(), random.random(), random.random()])
-    #size = random.random() 
-    #shape = random.random()
-    #position = np.array([random.random(), random.random(), random.random()])
-    #testobject2 = np.array([color,size,shape,position])
-    
-    #color = np.array([random.random(), random.random(), random.random()])
-    #size = random.random() 
-    #shape = random.random()
-    #position = np.array([random.random(), random.random(), random.random()])
-    #testobject3 = np.array([color,size,shape,position])
-    
-    #z = np.array([testobject1 ,testobject2, testobject3])
-    #x = 2
-    #y = z[1][2]
+    print(y.feature_val)
+    print(z[0][0])
+    feature_output=check_feature_client(0, y.feature_val, z)
+ 
     print "Requesting Checking Featrue"
     #feature_output=check_feature_client(x, y, z)
-    print "%Object = %s"%(OutputObject)
+    print "%Object = %s"%(feature_output[1])
     #print "%Object = %s"%(feature_output.output_object)

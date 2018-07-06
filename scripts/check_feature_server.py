@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 
+from beginner_tutorials.msg import *
 from beginner_tutorials.srv import *
+import numpy as np
 import rospy
 
 
