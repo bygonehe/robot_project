@@ -1,2 +1,6 @@
 string name
-Feature[] feature_list
+Feature color
+Feature shape
+Feature size
+Feature position
+float32[] feature_list
