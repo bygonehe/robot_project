@@ -1,7 +1,8 @@
 #input should be the feature_index,feature_value and object_list
 #request field
-beginner_tutorials/Feature feature
-beginner_tutorials/Object object
+int64 feature_ind
+beginner_tutorials/Feature feature_val
+beginner_tutorials/Object[] object
 ---
 #Output should be the object_index
 #response field
