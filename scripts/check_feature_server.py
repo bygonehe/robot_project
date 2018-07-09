@@ -6,15 +6,17 @@ import numpy as np
 import rospy
 
 
-def robot_know_which_object_human_want(feature_index, feature_value, object_list):
-    # For example, when human said give me the red object, robot should know which object(or objects) is(are) red.
-    # feature_index = 0 means COLOR, =1 means SIZE, =2 means SHAPE, =3 means POSITION
-    if feature_index == 1 or feature_index == 2: # size and shape index because of only 1 element of each index
-        threshold_value = 0.1  # Set a threshold value
-        x = len(object_list)  # The number of objects
-        bar = object_list[0:len(object_list),feature_index]  # Extract feature value of corresponding feature index for all objects
-        dif=abs(bar-feature_value) 
-        S = (sum(dif<=threshold_value)) # Calculate how many objects satisfy the condition
+def robot_know_which_object_human_want(feature_index, feature_value, testobject):
+    if feature_index == 1 or feature_index == 2: # size and shape index because of 1 element of each index
+        threshold_value = 0.1
+        x = len(testobject)
+        bar=[0]*x
+        dif=[0]*x
+        for i in range (0,x):
+            bar[i]=testobject[i][feature_index]
+            dif[i]=abs(bar[i]-feature_value)
+        dif = np.array(dif)
+        S = (sum(dif<=threshold_value))
 
         corr_index = [[0]*1 for i in range(S)]
         corr_value = [[0]*1 for i in range(S)]
@@ -22,41 +24,46 @@ def robot_know_which_object_human_want(feature_index, feature_value, object_list
         m=0
     
         while (i<S):
-            if dif.min()<=object_list:
-                corr_index[m] = (np.argmin(dif, axis=0)) # Get the index of the minimum difference
-                corr_value[m] = dif.min() # Get the value of the minimum difference
+            if dif.min()<=threshold_value:
+                corr_index[m] = (np.argmin(dif, axis=0))
+                corr_value[m] = dif.min()
                 temp_para = corr_index[i];
                 m=m+1
-                dif[temp_para]=256 # Delete this minimum value by replacing this small value by a large value
+                dif[temp_para]=256
             i=i+1
-    if feature_index == 0 or feature_index == 3: # color and position index have 3 elements, COLOR has RGB, position has xyz
-        threshold_value = 0.1
-        x = len(object_list) # number of objects
-        bar = object_list[0:len(object_list),feature_index] # Extract feature value of corresponding feature index for all objects
+    if feature_index == 0 or feature_index == 3: # color and position index have 3 elements
+        threshold_value = 0.05
+        x = len(object_list) 
+        bar=[0]*x
+        dif=[0]*x
+        print(feature_value)
+        for i in range (0,x):
+            bar[i]=object_list[i][feature_index]
         S = 0
         record = 0
-        corr_index = [[200]*1 for i in range(x)] # Initially, define corr_index a long array
+        corr_index = [[200]*1 for i in range(x)]
         for i in range(0,x):
-            dif = (abs((bar[i])-feature_value)) 
-            t =  (sum(dif<=threshold_value)) # determine number of elements for each object, which satisfy the condition
-            if t == 2 or t == 3: # If the 2 of 3 or 3 of 3 elements satisfy the condition: enter this 'if' condition
-                corr_index[S]=i # Recording the object_index
+            dif=abs(bar[i]-np.array(feature_value))
+            t =  (sum(dif<=threshold_value))
+            if t == 2 or t == 3:
+                corr_index[S]=i
                 S = S+1  
-        # The code below is just for delete [200] initialy set.
-        for i in range(0,x): 
+        for i in range(0,x):
             if corr_index[i]==[200]:
                 record = record+1
         if record == 0:
             corr_index = corr_index
         else:
             corr_index = corr_index[:-record]
-            
-        ##    
         if S == 0:
-            return ('Can not find the object')  
-    thresholded_list = object_list[corr_index]
-    corr_index = np.array(corr_index)+1 #because the initial index is 0, To represent nth object, add 1
-    return [thresholded_list,corr_index]
+            return ('Can not find the object')
+    len2 = len(corr_index)
+    thresholded_list = [0]*len2
+    for i in range(0,len2):
+        thresholded_list[i] = [testobject[corr_index[i]]]
+    corr_index = np.array(corr_index)+1 #because the initial index is 0, To represent nth object, add one
+    fanhuizhi = [thresholded_list,corr_index.tolist()]
+    return [thresholded_list,corr_index.tolist()]
 
 
 def check_feature_server():
