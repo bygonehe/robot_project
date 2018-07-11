@@ -53,6 +53,7 @@ find_package(catkin REQUIRED COMPONENTS
    FILES
    Num.msg
    Feature.msg
+   Feature_float.msg
    Object.msg
    OutputFeature.msg 
    OutputObject.msg
