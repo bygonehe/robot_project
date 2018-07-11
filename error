@@ -1,0 +1,1 @@
+genpy.message.SerializationError: <class 'struct.error'>: 'required argument is not a float' when writing 'Banana'
