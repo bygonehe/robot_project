@@ -1,6 +1,6 @@
 string name
 Feature color
-Feature shape
-Feature size
+Feature_float shape
+Feature_float size
 Feature position
 float32[] feature_list
