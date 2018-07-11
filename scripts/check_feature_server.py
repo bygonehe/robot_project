@@ -6,9 +6,18 @@ import numpy as np
 import rospy
 
 
-def robot_know_which_object_human_want(feature_index, feature_value, testobject):
+def robot_know_which_object_human_want(feature_index, Feature_value, Testobject):
+    if feature_index == 0 or feature_index == 3:
+        feature_value = Feature_value.feature_val
+    if feature_index == 1 or feature_index == 2:
+        feature_value = Feature_value.feature_valu
+    testobject = [0]*len(Testobject)
+    if len(feature_value) == 1:
+        feature_value = feature_value[0]
+    for i in range(0,len(Testobject)):
+        testobject[i]=Testobject[i].feature_list
     if feature_index == 1 or feature_index == 2: # size and shape index because of 1 element of each index
-        threshold_value = 0.1
+        threshold_value = 0.05
         x = len(testobject)
         bar=[0]*x
         dif=[0]*x
