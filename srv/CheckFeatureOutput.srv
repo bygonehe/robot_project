@@ -1,10 +1,9 @@
 #input should be the feature_index,feature_value and object_list
 #request field
 int64 feature_ind
-beginner_tutorials/Feature feature_value
-beginner_tutorials/Object[] object
+float32[] feature_value
+beginner_tutorials/Object[] object_list
 ---
 #Output should be the object_index
-#response field
-beginner_tutorials/OutputObject outputobject
+int64[] outputobject
 
