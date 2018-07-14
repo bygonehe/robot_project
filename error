@@ -1,1 +1,7 @@
-genpy.message.SerializationError: <class 'struct.error'>: 'required argument is not a float' when writing 'Banana'
+Service call failed: service [/check_feature] responded with an error: error processing request: robot_know_which_object_human_want() takes exactly 3 arguments (1 given)
+Requesting Checking Featrue
+Traceback (most recent call last):
+  File "/home/apple/catkin_ws/src/beginner_tutorials/scripts/check_feature_client.py", line 60, in <module>
+    print "%Object = %s"%(Output)
+ValueError: unsupported format character 'O' (0x4f) at index 1
+
