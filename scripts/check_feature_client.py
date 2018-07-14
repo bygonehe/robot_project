@@ -24,50 +24,38 @@ if __name__ == "__main__":
     print Feature.COLOR
 
     y = Feature()
-    y.feature_val = [0.2, 0.3, 0.5]
+    feature_value = [0.2, 0.3, 0.5]
     #y.feature_val = 0.21
 
 
     z1 = Object()
     z1.name = 'Banana'
-    #z1_color = Feature()
-    z1.color.feature_val = [0.2, 0.3, 0.5]
-    #z1_shape = Feature()
-    z1.shape.feature_valu = 0.21
-    #z1_size = Feature()
-    z1.size.feature_valu = 0.6
-    #z1_position = Feature()
-    z1.position.feature_val = [0.8, 0, 0]
-    z1.feature_list = [z1.color.feature_val, z1.shape.feature_valu, z1.size.feature_valu, z1.position.feature_val]
+    z1.color = [0.2, 0.3, 0.5]
+    z1.shape = 0.21
+    z1.size = 0.6
+    z1.position = [0.8, 0, 0]
+    z1_feature_list = [z1.color, z1.shape, z1.size, z1.position]
 
 
     z2 = Object()
     z2.name = 'Apple'
-    #z1_color = Feature()
-    z2.color.feature_val = [0.8, 0.6, 0.59]
-    #z1_shape = Feature()
-    z2.shape.feature_valu = 0.87
-    #z1_size = Feature()
-    z2.size.feature_valu = 0.1
-    #z1_position = Feature()
-    z2.position.feature_val = [0.6, 0.5, 0.1]
-    z2.feature_list = [z2.color.feature_val, z2.shape.feature_valu, z2.size.feature_valu, z2.position.feature_val]
+    z2.color = [0.8, 0.6, 0.59]
+    z2.shape = 0.87
+    z2.size = 0.1
+    z2.position = [0.6, 0.5, 0.1]
+    z2_feature_list = [z2.color, z2.shape, z2.size, z2.position]
 
-    #z = [z1.feature_list,z2.feature_list]
-    z = [z1,z2]
-    print(z)
-    #print(len(z))
-    ztotal = [0]*len(z)
-    print(len(y.feature_val))
-    for i in range(0,len(z)):
-        print(z[i].feature_list)
-        ztotal[i]=z[i].feature_list
-    print(ztotal)
-    #print(y.feature_val)
-    #print(z[0][0])
-    object_output=check_feature_client(0, y, z)
+    object_list = [z1,z2]
+    print(len(object_list))
+    z_feature_list = [0]*len(object_list)
+    ztotal=[0]*len(object_list)
+    for i in range(0,len(object_list)):
+        ztotal[i]=[object_list[i].color,object_list[i].shape,object_list[i].size,object_list[i].position]
+    print(feature_value)
+    print(object_list)
+    #Output = OutputObject()
+    Output=check_feature_client(0, feature_value, object_list)
  
     print "Requesting Checking Featrue"
-    #feature_output=check_feature_client(x, y, z)
-    print "%Object = %s"%(object_output[1])
+    print "%Object = %s"%(Output)
     #print "%Object = %s"%(feature_output.output_object)
