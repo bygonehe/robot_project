@@ -16,7 +16,6 @@ def robot_know_which_object_human_want(feature_index, Feature_value, Testobject)
         feature_value = feature_value[0]
     for i in range(0,len(Testobject)):
         testobject[i]=[Testobject[i].color,Testobject[i].shape,Testobject[i].size,Testobject[i].position]
-    print(testobject)
 
     # The code below works well in Jupter Notebook
     if feature_index == 1 or feature_index == 2: # size and shape index because of 1 element of each index
@@ -75,7 +74,7 @@ def robot_know_which_object_human_want(feature_index, Feature_value, Testobject)
         thresholded_list[i] = [testobject[corr_index[i]]]
     corr_index = np.array(corr_index)+1 #because the initial index is 0, To represent nth object, add one
     fanhuizhi = [thresholded_list,corr_index.tolist()]
-    return [fanhuizhi[1]]
+    return (fanhuizhi[1])
 
 
 def check_feature_server():

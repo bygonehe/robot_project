@@ -57,5 +57,5 @@ if __name__ == "__main__":
     Output=check_feature_client(0, feature_value, object_list)
  
     print "Requesting Checking Featrue"
-    print "%Object = %s"%(Output)
+    print (Output)
     #print "%Object = %s"%(feature_output.output_object)
