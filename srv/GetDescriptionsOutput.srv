@@ -1,7 +1,8 @@
 #request field
-beginner_tutorials/Feature feature
-beginner_tutorials/Object object
+beginner_tutorials/Object[] Object_LIST
+int64[] Feature_list
+beginner_tutorials/Object Target_object
 
 ---
 #response field
-beginner_tutorials/OutputFeature outputfeature
+int64[] Outputfeature
