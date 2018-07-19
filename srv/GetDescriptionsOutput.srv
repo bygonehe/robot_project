@@ -5,4 +5,4 @@ beginner_tutorials/Object Target_object
 
 ---
 #response field
-int64[] Outputfeature
+string[] Outputfeature
