@@ -5,12 +5,10 @@ from beginner_tutorials.srv import *
 import numpy as np
 import rospy
 
-
-def robot_know_which_object_human_want(feature_index, Feature_value, Testobject):
-    if feature_index == 0 or feature_index == 3:
-        feature_value = Feature_value.feature_val
-    if feature_index == 1 or feature_index == 2:
-        feature_value = Feature_value.feature_valu
+def robot_know_which_object_human_want(req):
+    feature_index = req.Feature_Index
+    feature_value = req.Feature_Value
+    Testobject = req.Object_List
     testobject = [0]*len(Testobject)
     if len(feature_value) == 1:
         feature_value = feature_value[0]
@@ -44,12 +42,12 @@ def robot_know_which_object_human_want(feature_index, Feature_value, Testobject)
             i=i+1
     if feature_index == 0 or feature_index == 3: # color and position index have 3 elements
         threshold_value = 0.05
-        x = len(object_list) 
+        x = len(testobject) 
         bar=[0]*x
         dif=[0]*x
         print(feature_value)
         for i in range (0,x):
-            bar[i]=object_list[i][feature_index]
+            bar[i]=testobject[i][feature_index]
         S = 0
         record = 0
         corr_index = [[200]*1 for i in range(x)]
@@ -72,9 +70,12 @@ def robot_know_which_object_human_want(feature_index, Feature_value, Testobject)
     thresholded_list = [0]*len2
     for i in range(0,len2):
         thresholded_list[i] = [testobject[corr_index[i]]]
-    corr_index = np.array(corr_index)+1 #because the initial index is 0, To represent nth object, add one
+    corr_index = np.array(corr_index) #because the initial index is 0, To represent nth object, add one
     fanhuizhi = [thresholded_list,corr_index.tolist()]
-    return (fanhuizhi[1])
+    print((fanhuizhi[1]))
+    for i in range(0,len(fanhuizhi[1])):
+        fanhuizhi[1][i]=Testobject[i].name
+    return [fanhuizhi[1]]
 
 
 def check_feature_server():
