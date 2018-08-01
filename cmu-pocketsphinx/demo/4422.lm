@@ -1,0 +1,162 @@
+Language model created by QuickLM on Wed Jun 20 13:14:53 EDT 2018
+Copyright (c) 1996-2010 Carnegie Mellon University and Alexander I. Rudnicky
+
+The model is in standard ARPA format, designed by Doug Paul while he was at MITRE.
+
+The code that was used to produce this language model is available in Open Source.
+Please visit http://www.speech.cs.cmu.edu/tools/ for more information
+
+The (fixed) discount mass is 0.5. The backoffs are computed using the ratio method.
+This model based on a corpus of 34 sentences and 36 words
+
+\data\
+ngram 1=36
+ngram 2=68
+ngram 3=34
+
+\1-grams:
+-0.7782 </s> -0.3010
+-0.7782 <s> -0.2218
+-2.3096 BACK -0.2218
+-2.3096 BACKWARD -0.2218
+-2.3096 BEHIND -0.2218
+-2.3096 BLACK -0.2218
+-2.3096 BLUE -0.2218
+-2.3096 BRING -0.2218
+-2.3096 CYLINDRIC -0.2218
+-2.3096 FORWARD -0.2218
+-2.3096 FRONT -0.2218
+-2.3096 FULL -0.2218
+-2.3096 GET -0.2218
+-2.3096 GREEN -0.2218
+-2.3096 HALF -0.2218
+-2.3096 HALT -0.2218
+-2.3096 IN -0.2218
+-2.3096 LARGE -0.2218
+-2.3096 LEFT -0.2218
+-2.3096 ME -0.2218
+-2.3096 MEDIUM -0.2218
+-2.3096 MOVE -0.2218
+-2.3096 OBJECT -0.2218
+-2.3096 OF -0.2218
+-2.3096 PICK -0.2218
+-2.3096 RECTANGULAR -0.2218
+-2.3096 RED -0.2218
+-2.3096 RIGHT -0.2218
+-2.3096 ROUND -0.2218
+-2.3096 SMALL -0.2218
+-2.3096 SPEED -0.2218
+-2.3096 SQUARE -0.2218
+-2.3096 STOP -0.2218
+-2.3096 UP -0.2218
+-2.3096 WHITE -0.2218
+-2.3096 YELLOW -0.2218
+
+\2-grams:
+-1.8325 <s> BACK 0.0000
+-1.8325 <s> BACKWARD 0.0000
+-1.8325 <s> BEHIND 0.0000
+-1.8325 <s> BLACK 0.0000
+-1.8325 <s> BLUE 0.0000
+-1.8325 <s> BRING 0.0000
+-1.8325 <s> CYLINDRIC 0.0000
+-1.8325 <s> FORWARD 0.0000
+-1.8325 <s> FRONT 0.0000
+-1.8325 <s> FULL 0.0000
+-1.8325 <s> GET 0.0000
+-1.8325 <s> GREEN 0.0000
+-1.8325 <s> HALF 0.0000
+-1.8325 <s> HALT 0.0000
+-1.8325 <s> IN 0.0000
+-1.8325 <s> LARGE 0.0000
+-1.8325 <s> LEFT 0.0000
+-1.8325 <s> ME 0.0000
+-1.8325 <s> MEDIUM 0.0000
+-1.8325 <s> MOVE 0.0000
+-1.8325 <s> OBJECT 0.0000
+-1.8325 <s> OF 0.0000
+-1.8325 <s> PICK 0.0000
+-1.8325 <s> RECTANGULAR 0.0000
+-1.8325 <s> RED 0.0000
+-1.8325 <s> RIGHT 0.0000
+-1.8325 <s> ROUND 0.0000
+-1.8325 <s> SMALL 0.0000
+-1.8325 <s> SPEED 0.0000
+-1.8325 <s> SQUARE 0.0000
+-1.8325 <s> STOP 0.0000
+-1.8325 <s> UP 0.0000
+-1.8325 <s> WHITE 0.0000
+-1.8325 <s> YELLOW 0.0000
+-0.3010 BACK </s> -0.3010
+-0.3010 BACKWARD </s> -0.3010
+-0.3010 BEHIND </s> -0.3010
+-0.3010 BLACK </s> -0.3010
+-0.3010 BLUE </s> -0.3010
+-0.3010 BRING </s> -0.3010
+-0.3010 CYLINDRIC </s> -0.3010
+-0.3010 FORWARD </s> -0.3010
+-0.3010 FRONT </s> -0.3010
+-0.3010 FULL </s> -0.3010
+-0.3010 GET </s> -0.3010
+-0.3010 GREEN </s> -0.3010
+-0.3010 HALF </s> -0.3010
+-0.3010 HALT </s> -0.3010
+-0.3010 IN </s> -0.3010
+-0.3010 LARGE </s> -0.3010
+-0.3010 LEFT </s> -0.3010
+-0.3010 ME </s> -0.3010
+-0.3010 MEDIUM </s> -0.3010
+-0.3010 MOVE </s> -0.3010
+-0.3010 OBJECT </s> -0.3010
+-0.3010 OF </s> -0.3010
+-0.3010 PICK </s> -0.3010
+-0.3010 RECTANGULAR </s> -0.3010
+-0.3010 RED </s> -0.3010
+-0.3010 RIGHT </s> -0.3010
+-0.3010 ROUND </s> -0.3010
+-0.3010 SMALL </s> -0.3010
+-0.3010 SPEED </s> -0.3010
+-0.3010 SQUARE </s> -0.3010
+-0.3010 STOP </s> -0.3010
+-0.3010 UP </s> -0.3010
+-0.3010 WHITE </s> -0.3010
+-0.3010 YELLOW </s> -0.3010
+
+\3-grams:
+-0.3010 <s> BACK </s>
+-0.3010 <s> BACKWARD </s>
+-0.3010 <s> BEHIND </s>
+-0.3010 <s> BLACK </s>
+-0.3010 <s> BLUE </s>
+-0.3010 <s> BRING </s>
+-0.3010 <s> CYLINDRIC </s>
+-0.3010 <s> FORWARD </s>
+-0.3010 <s> FRONT </s>
+-0.3010 <s> FULL </s>
+-0.3010 <s> GET </s>
+-0.3010 <s> GREEN </s>
+-0.3010 <s> HALF </s>
+-0.3010 <s> HALT </s>
+-0.3010 <s> IN </s>
+-0.3010 <s> LARGE </s>
+-0.3010 <s> LEFT </s>
+-0.3010 <s> ME </s>
+-0.3010 <s> MEDIUM </s>
+-0.3010 <s> MOVE </s>
+-0.3010 <s> OBJECT </s>
+-0.3010 <s> OF </s>
+-0.3010 <s> PICK </s>
+-0.3010 <s> RECTANGULAR </s>
+-0.3010 <s> RED </s>
+-0.3010 <s> RIGHT </s>
+-0.3010 <s> ROUND </s>
+-0.3010 <s> SMALL </s>
+-0.3010 <s> SPEED </s>
+-0.3010 <s> SQUARE </s>
+-0.3010 <s> STOP </s>
+-0.3010 <s> UP </s>
+-0.3010 <s> WHITE </s>
+-0.3010 <s> YELLOW </s>
+
+\end\
+

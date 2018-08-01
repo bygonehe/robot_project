@@ -1,0 +1,24 @@
+#JSGF V1.0;
+
+/**
+ * JSGF Grammar for Turtle example
+ */
+
+grammar asr;
+
+public <rule2> = <action> [<color>] [<size>] [<shape>] [<objects>] [<position>] [<preposition>] [<color>] [<size>] [<shape>] [<objects>];
+
+<action> = BRING ME | GET ME | PICK UP;
+
+<color> = RED | GREEN | BLUE | WHITE | BLACK | YELLOW
+
+<size> = LARGE | MEDIUM | SMALL
+
+<shape> = ROUND | SQUARE | ROUND | RECTANGULAR
+
+<objects> = CAN | OBJECT;
+
+<position> = LEFT | RIGHT | FORWARD | BACKWARD
+
+<preposition> = FROM | TO;
+
