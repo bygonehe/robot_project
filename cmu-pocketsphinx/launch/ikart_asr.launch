@@ -1,0 +1,27 @@
+<launch>
+
+	<arg name="input" default=":default"/>
+    <arg name="dict" value="$(find pocketsphinx)/models/1013.dic"/>
+    <arg name="lm" default="$(find pocketsphinx)/models/1013.lm"/>
+    <arg name="kws" default="$(find pocketsphinx)/demo/automated.kwlist"/>
+    <arg name="keyphrase" default=":default"/>
+    <arg name="threshold" default=":default"/>
+    <arg name="hmm" default="$(find pocketsphinx)/lang/en-us"/>
+    <arg name="gram" default="$(find pocketsphinx)/models/1013"/>
+    <arg name="grammar" default="asr"/>
+    <arg name="rule" default="rule"/>
+	
+	<include file="$(find pocketsphinx)/launch/continuous.launch">
+		<arg name="input"     value="$(arg input)"/>
+		<arg name="dict"      value="$(arg dict)"/>
+		<arg name="lm"        value="$(arg lm)"/>
+		<arg name="kws"       value="$(arg kws)"/>
+		<arg name="keyphrase" value="$(arg keyphrase)"/>
+		<arg name="threshold" value="$(arg threshold)"/>
+		<arg name="hmm"       value="$(arg hmm)"/>
+		<arg name="gram"      value="$(arg gram)"/>
+		<arg name="grammar"   value="$(arg grammar)"/>
+		<arg name="rule"      value="$(arg rule)"/>
+	</include>
+	
+</launch>

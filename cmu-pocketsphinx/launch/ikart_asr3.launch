@@ -1,0 +1,14 @@
+<launch>
+
+	<arg name="input" default=":default"/>
+    <arg name="dict" value="$(find cmu_pocketsphinx)/demo/4422.dic"/>
+    <arg name="lm" default="$(find cmu_pocketsphinx)/demo/4422.lm"/>
+    <arg name="kws" default="$(find cmu_pocketsphinx)/demo/automated.kwlist"/>
+    <arg name="keyphrase" default=":default"/>
+    <arg name="threshold" default=":default"/>
+    <arg name="hmm" default="$(find cmu_pocketsphinx)/demo/en-us/en-us"/>
+    <arg name="gram" default="$(find cmu_pocketsphinx)/demo/asr.gram"/>
+    <arg name="grammar" default="asr"/>
+    <arg name="rule" default="rule2"/>
+	
+</launch>
