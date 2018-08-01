@@ -4,3 +4,5 @@ This function is for the robot to know which few objects satisfy the features pe
 
 get_best_descriptions:
 This function is for the robot to recoginze an object with least feature(features).
+
+For check_feature_speech_client, the pocketsphinx and sphinxbase package should be installed. 
