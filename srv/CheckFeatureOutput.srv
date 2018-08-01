@@ -1,7 +1,8 @@
 #input should be the feature_index,feature_value and object_list
 #request field
-int64 Feature_Index
-float32[] Feature_Value
+int64[] Feature_Index
+beginner_tutorials/Feature[] Feature_Value
+#float32[] Feature_Value
 beginner_tutorials/Object[] Object_List
 ---
 #Output should be the object_index
